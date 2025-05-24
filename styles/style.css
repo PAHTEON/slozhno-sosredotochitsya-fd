@@ -97,7 +97,6 @@
 }
 
 .header__theme-menu-button:focus-visible {
-    /* text-decoration: underline var(--accent-color);*/
     outline: none;
     border-block-end: 1px solid var(--accent-color);
 }
@@ -323,7 +322,6 @@
         justify-self: end;
         inline-size: 364px;
     }
-    /* сделал rec*/
     .rec {
         position: absolute;
         right: 48px;
