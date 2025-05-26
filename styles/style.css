@@ -274,8 +274,6 @@
     display: grid;
     justify-self: center;
     align-items: center;
-    display: grid;
-    align-self: center;
 }
 
 .footer_title {
