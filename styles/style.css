@@ -10,11 +10,12 @@
 
 .header {
     position: relative;
-    height: 648px;
+    block-size: 100vh;
     inline-size: 100%;
     padding-left: 10px;
     padding-right: 10px;
-    margin: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
     display: grid;
     justify-self: center;
 }
@@ -50,7 +51,7 @@
 .rec {
     position: absolute;
     right: 38px;
-    top: 2px;
+    top: 0px;
     font-family: IBM Plex Mono, sans-serif;
     font-weight: 400;
     font-size: 18px;
@@ -110,7 +111,7 @@
     grid-template-rows: repeat(3, 26px);
     gap: 10px;
     justify-self: end;
-    padding-top: 65px;
+    padding-top: 63px;
 }
 
 .header_title {
@@ -118,7 +119,7 @@
     font-family: IBM Plex Mono, sans-serif;
     font-weight: 700;
     line-height: 83%;
-    padding-top: 15px;
+    padding-top: 0px;
     padding-bottom: 0px;
     color: var(--background-color);
     display: grid;
@@ -258,7 +259,7 @@
 
 .footer {
     position: relative;
-    height: 647px;
+    height: 100%;
     inline-size: 100%;
     padding-left: 10px;
     padding-right: 10px;
@@ -266,6 +267,8 @@
     display: grid;
     justify-self: center;
     align-items: center;
+    padding-top: 225px;
+    padding-bottom: 220px;
 }
 
 .footer::before {
@@ -294,7 +297,6 @@
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     font-family: IBM Plex Mono, sans-serif;
     font-weight: 700;
-    font-size: 116px;
     line-height: 83%;
     padding-top: 50px;
     padding-bottom: 55px;
