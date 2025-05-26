@@ -11,12 +11,13 @@
   */
     --accent-color: #ff8dcb;
     --background-color: #FFC2E6;
-    --header-image-background: url("/images/cover-image-light.png");
-    --header-text-color: #000028;
+    --header-image-background: url("../images/cover-image-light.png");
+    --header-text-color: #353430;
     --paragraph_text_color: #353430;
     --paragraph_heading: #353430;
     --button_color_hover: #32312D66;
     --border_color: #353430;
+    --page_background_color: #fff1f7;
     .rec {
         display: none;
     }
@@ -26,12 +27,13 @@
      :root {
         --accent-color: #ff8dcb;
         --background-color: #FFC2E6;
-        --header-image-background: url("/images/cover-image-light.png");
-        --header-text-color: #000028;
+        --header-image-background: url("../images/cover-image-light.png");
+        --header-text-color: #353430;
         --paragraph_text_color: #353430;
         --paragraph_heading: #353430;
         --button_color_hover: #32312D66;
         --border_color: #353430;
+        --page_background_color: #fff1f7;
         .rec {
             display: none;
         }

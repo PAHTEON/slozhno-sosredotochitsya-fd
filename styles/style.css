@@ -6,6 +6,7 @@
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    background-color: var(--page_background_color);
 }
 
 .header {
@@ -15,12 +16,16 @@
     padding-left: 10px;
     padding-right: 10px;
     justify-self: center;
+    min-height: 668px;
+    display: grid;
+    /* align-items: center;*/
+    grid-template-rows: 1fr min-content 1fr;
 }
 
 
 /* Уголок в правом верхнем углу */
 
-.header::before {
+.decorated-zone::before {
     content: "";
     position: absolute;
     top: 10px;
@@ -34,7 +39,7 @@
 
 /* Уголок в левом нижнем углу */
 
-.header::after {
+.decorated-zone::after {
     content: "";
     position: absolute;
     bottom: 10px;
@@ -49,13 +54,12 @@
     position: absolute;
     right: 38px;
     top: 10px;
-    font-family: IBM Plex Mono, sans-serif;
+    font-family: "IBM Plex Mono", sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 25px;
     text-align: center;
     color: var(--accent-color);
-    width: 33px;
     height: 26px;
 }
 
@@ -75,12 +79,12 @@
 }
 
 .header__theme-menu-button {
-    font-family: IBM Plex Mono, sans-serif;
+    font-family: "IBM Plex Mono", sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 18px;
     text-align: center;
-    color: var(--accent-color);
+    color: var(--border_color);
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -90,38 +94,40 @@
 }
 
 .header__theme-menu-button_active {
-    border: 1px solid var(--accent-color);
+    border: 1px solid var(--border_color);
     pointer-events: none;
 }
 
 .header__theme-menu-button:focus-visible {
     outline: none;
-    border-block-end: 1px solid var(--accent-color);
+    border-block-end: 1px solid var(--border_color);
 }
 
 .header__theme-menu-button:hover {
-    border: 1px solid var(--button_color_hover);
+    border: 1px solid var(--border_color);
 }
 
 .header__theme-menu-list {
     display: grid;
     grid-template-rows: repeat(3, 26px);
     gap: 10px;
+}
+
+.header__theme-menu {
+    align-self: center;
     justify-self: end;
-    padding-top: 75px;
 }
 
 .header_title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    font-family: IBM Plex Mono, sans-serif;
+    font-family: "IBM Plex Mono", sans-serif;
     font-weight: 700;
     line-height: 83%;
     color: var(--background-color);
     inline-size: 355px;
     display: grid;
     justify-self: center;
-    padding-top: 65px;
-    padding-bottom: 55px;
+    align-self: center;
 }
 
 .title-decor {
@@ -130,15 +136,15 @@
 }
 
 .header_text {
-    font-family: IBM Plex Mono, sans-serif;
+    font-family: "IBM Plex Mono", sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 23.4px;
     color: var(--header-text-color);
     inline-size: 355px;
-    height: 117px;
     display: grid;
     justify-self: center;
+    align-self: center;
 }
 
 .background_color_text {
@@ -154,6 +160,11 @@
     padding-right: 10px;
 }
 
+.text-link {
+    text-shadow: 2px 2px 0 var(--accent-color);
+    text-decoration: none;
+}
+
 .text-link:hover {
     border-block-end: 1px solid var(--paragraph_text_color);
 }
@@ -163,7 +174,7 @@
 }
 
 .text_with_background {
-    font-family: IBM Plex Mono, sans-serif;
+    font-family: "IBM Plex Mono", sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 23.4px;
@@ -172,7 +183,7 @@
 }
 
 .section_title {
-    font-family: IBM Plex Mono, sans-serif;
+    font-family: "IBM Plex Mono", sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 23.4px;
@@ -181,7 +192,7 @@
 }
 
 .paragraph_text {
-    font-family: IBM Plex Mono, sans-serif;
+    font-family: "IBM Plex Mono", sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 23.4px;
@@ -190,7 +201,7 @@
 }
 
 .paragraph_text_advice {
-    font-family: IBM Plex Mono, sans-serif;
+    font-family: "IBM Plex Mono", sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 23.4px;
@@ -202,7 +213,7 @@
 }
 
 .title_advice {
-    font-family: IBM Plex Mono, sans-serif;
+    font-family: "IBM Plex Mono", sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 23.4px;
@@ -263,42 +274,23 @@
     display: grid;
     justify-self: center;
     align-items: center;
-    padding-top: 225px;
-    padding-bottom: 220px;
-}
-
-.footer::before {
-    content: "";
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 25px;
-    height: 25px;
-    border-block-start: 1px solid var(--border_color);
-    border-inline-end: 1px solid var(--border_color);
-}
-
-.footer::after {
-    content: "";
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    width: 25px;
-    height: 25px;
-    border-inline-start: 1px solid var(--border_color);
-    border-block-end: 1px solid var(--border_color);
+    display: grid;
+    align-self: center;
 }
 
 .footer_title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    font-family: IBM Plex Mono, sans-serif;
+    font-family: "IBM Plex Mono", sans-serif;
     font-weight: 700;
     line-height: 83%;
-    padding-top: 50px;
-    padding-bottom: 55px;
     color: var(--background-color);
     display: grid;
     justify-self: center;
+}
+
+.footer_title .title-decor {
+    text-shadow: 2px 2px 0 var(--accent-color);
+    text-decoration: none;
 }
 
 @media (min-width: 768px) {
@@ -306,21 +298,23 @@
         position: relative;
         inline-size: 100%;
         padding-left: 0;
-        padding-right: 20px;
+    }
+    .header__theme-menu-list {
+        display: grid;
+        padding-right: 10px;
     }
     .header_title {
         justify-self: start;
-        padding-top: 173px;
-        padding-bottom: 162px;
         font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
         inline-size: 100%;
+        align-self: center;
     }
     .header_text {
+        align-self: center;
         justify-self: end;
         inline-size: 364px;
     }
     .rec {
-        position: absolute;
         right: 48px;
         top: 20px;
     }
@@ -329,20 +323,17 @@
         position: absolute;
         right: -10px;
     }
-    .header::before {
+    .decorated-zone::before {
         content: "";
         position: absolute;
         top: 20px;
         right: 20px;
     }
-    .header::after {
+    .decorated-zone::after {
         content: "";
         position: absolute;
         bottom: 20px;
         left: 20px;
-    }
-    .header__theme-menu-list {
-        padding-top: 192px;
     }
     .section_why {
         display: grid;
@@ -421,35 +412,26 @@
         padding-left: 20px;
         padding-right: 20px;
     }
-    .footer::before {
-        content: "";
-        right: 20px;
-        top: 20px;
-    }
-    .footer::after {
-        content: "";
-        left: 20px;
-        bottom: 20px;
-    }
     .footer_title {
-        padding-top: 53px;
         font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     }
 }
 
 @media (min-width: 1024px) {
+    .header {
+        padding-right: 20px;
+    }
     .rec {
-        position: absolute;
         right: 48px;
         top: 20px;
     }
-    .header::after {
+    .decorated-zone::after {
         content: "";
         position: absolute;
         bottom: 20px;
         left: 20px;
     }
-    .header::before {
+    .decorated-zone::before {
         content: "";
         position: absolute;
         top: 20px;
@@ -457,8 +439,6 @@
     }
     .header_title {
         font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-        padding-top: 200px;
-        padding-bottom: 114px;
         inline-size: 100%;
     }
     .decreace_card_info {
@@ -466,17 +446,24 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
     }
+    .header__theme-menu {
+        align-self: start;
+        justify-self: center;
+    }
     .header__theme-menu-list {
         display: grid;
         grid-template-columns: repeat(3, 70px);
         gap: 10px;
-        justify-self: center;
-        padding-left: 20px;
+        grid-template-rows: 1fr;
         padding-top: 20px;
+        padding-left: 30px;
+        align-self: start;
+        justify-self: center;
     }
     .header_text {
         inline-size: 491px;
         height: 71px;
+        align-self: center;
     }
     .section_why {
         gap: 10px;
@@ -494,18 +481,7 @@
     .container_img {
         padding-top: 10px;
     }
-    .footer::before {
-        content: "";
-        top: 20px;
-        right: 20px;
-    }
-    .footer::after {
-        content: "";
-        left: 20px;
-        bottom: 20px;
-    }
     .footer_title {
-        padding-top: 50px;
         font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     }
 }

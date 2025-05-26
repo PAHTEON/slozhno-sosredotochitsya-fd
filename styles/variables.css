@@ -6,10 +6,11 @@
 :root {
     --accent-color: #FF0070;
     --background-color: #DB00FF;
-    --header-image-background: url("/images/cover-image-dark.png");
+    --header-image-background: url("../images/cover-image-dark.png");
     --header-text-color: #000028;
     --paragraph_text_color: #F1B2CE;
     --paragraph_heading: #FF0070;
     --button_color_hover: #FF007066;
     --border_color: #FF0070;
+    --page_background_color: #000028;
 }
