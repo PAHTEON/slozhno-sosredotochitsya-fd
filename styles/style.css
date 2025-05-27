@@ -162,7 +162,7 @@
     padding-right: 10px;
 }
 
-.text-link {
+.text_link {
     text-shadow: 2px 2px 0 var(--accent-color);
     text-decoration: none;
 }
@@ -171,7 +171,7 @@
     border-block-end: 1px solid var(--paragraph-text-color);
 }
 
-.text-link:focus {
+.text_link:focus {
     border: 1px solid var(--paragraph-text-color);
 }
 
@@ -431,10 +431,6 @@
         font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
         inline-size: 100%;
     }
-    .header_text {
-        margin-inline-end: 0px;
-        margin-block-end: 20px;
-    }
     .decreace_card_info {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -457,6 +453,8 @@
     .header_text {
         inline-size: 491px;
         align-self: center;
+        margin-inline-end: 0px;
+        margin-block-end: 20px;
     }
     .section_why {
         gap: 10px;
