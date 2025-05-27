@@ -167,7 +167,7 @@
     text-decoration: none;
 }
 
-.text-link:hover {
+.text_link:hover {
     border-block-end: 1px solid var(--paragraph-text-color);
 }
 
