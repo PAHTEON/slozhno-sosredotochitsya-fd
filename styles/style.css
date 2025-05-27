@@ -6,7 +6,7 @@
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    background-color: var(--page_background_color);
+    background-color: var(--page-background-color);
 }
 
 .header {
@@ -32,8 +32,8 @@
     right: 10px;
     width: 25px;
     height: 25px;
-    border-block-start: 1px solid var(--border_color);
-    border-inline-end: 1px solid var(--border_color);
+    border-block-start: 1px solid var(--border-color);
+    border-inline-end: 1px solid var(--border-color);
 }
 
 
@@ -46,8 +46,8 @@
     left: 10px;
     width: 25px;
     height: 25px;
-    border-inline-start: 1px solid var(--border_color);
-    border-block-end: 1px solid var(--border_color);
+    border-inline-start: 1px solid var(--border-color);
+    border-block-end: 1px solid var(--border-color);
 }
 
 .rec {
@@ -84,7 +84,7 @@
     font-size: 18px;
     line-height: 18px;
     text-align: center;
-    color: var(--border_color);
+    color: var(--border-color);
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -94,23 +94,24 @@
 }
 
 .header__theme-menu-button_active {
-    border: 1px solid var(--border_color);
+    border: 1px solid var(--border-color);
     pointer-events: none;
 }
 
 .header__theme-menu-button:focus-visible {
     outline: none;
-    border-block-end: 1px solid var(--border_color);
+    border-block-end: 1px solid var(--border-color);
 }
 
 .header__theme-menu-button:hover {
-    border: 1px solid var(--border_color);
+    border: 1px solid var(--border-color);
 }
 
 .header__theme-menu-list {
     display: grid;
     grid-template-rows: repeat(3, 26px);
     gap: 10px;
+    padding-top: 10px;
 }
 
 .header__theme-menu {
@@ -145,6 +146,7 @@
     display: grid;
     justify-self: center;
     align-self: center;
+    margin-block-end: 10px;
 }
 
 .background_color_text {
@@ -166,11 +168,11 @@
 }
 
 .text-link:hover {
-    border-block-end: 1px solid var(--paragraph_text_color);
+    border-block-end: 1px solid var(--paragraph-text-color);
 }
 
 .text-link:focus {
-    border: 1px solid var(--paragraph_text_color);
+    border: 1px solid var(--paragraph-text-color);
 }
 
 .text_with_background {
@@ -187,7 +189,7 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 23.4px;
-    color: var(--paragraph_heading);
+    color: var(--paragraph-heading);
     padding-top: 30px;
 }
 
@@ -196,7 +198,11 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 23.4px;
-    color: var(--paragraph_text_color);
+    color: var(--paragraph-text-color);
+    padding-bottom: 20px;
+}
+
+.advise_paragraph_list {
     padding-bottom: 20px;
 }
 
@@ -205,7 +211,7 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 23.4px;
-    color: var(--paragraph_text_color);
+    color: var(--paragraph-text-color);
 }
 
 .section_on_mindfulness {
@@ -286,20 +292,18 @@
     justify-self: center;
 }
 
-.footer_title .title-decor {
+.footer_title.title-decor {
     text-shadow: 2px 2px 0 var(--accent-color);
     text-decoration: none;
 }
 
 @media (min-width: 768px) {
     .header {
-        position: relative;
-        inline-size: 100%;
         padding-left: 0;
     }
     .header__theme-menu-list {
-        display: grid;
         padding-right: 10px;
+        padding-top: 20px;
     }
     .header_title {
         justify-self: start;
@@ -308,28 +312,20 @@
         align-self: center;
     }
     .header_text {
-        align-self: center;
         justify-self: end;
         inline-size: 364px;
+        margin-block-end: 20px;
+        margin-inline-end: 10px;
     }
     .rec {
         right: 48px;
         top: 20px;
     }
-    .rec::after {
-        content: "";
-        position: absolute;
-        right: -10px;
-    }
     .decorated-zone::before {
-        content: "";
-        position: absolute;
         top: 20px;
         right: 20px;
     }
     .decorated-zone::after {
-        content: "";
-        position: absolute;
         bottom: 20px;
         left: 20px;
     }
@@ -424,20 +420,20 @@
         top: 20px;
     }
     .decorated-zone::after {
-        content: "";
-        position: absolute;
         bottom: 20px;
         left: 20px;
     }
     .decorated-zone::before {
-        content: "";
-        position: absolute;
         top: 20px;
         right: 20px;
     }
     .header_title {
         font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
         inline-size: 100%;
+    }
+    .header_text {
+        margin-inline-end: 0px;
+        margin-block-end: 20px;
     }
     .decreace_card_info {
         display: grid;
@@ -460,7 +456,6 @@
     }
     .header_text {
         inline-size: 491px;
-        height: 71px;
         align-self: center;
     }
     .section_why {
